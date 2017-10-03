@@ -1,11 +1,12 @@
 <html>
 <head>
-
+<script type="text/javascript" src="validator.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form action="formChecker.js" method="post">
-    User-Name: <input type="text" name="userName"><br>
-    Password: <input type="password" name="userPassword"><br><br><br>
+  <form name="store" action="customerBackend.php" method="post">
+    User-Name: <input type="email" name="userName"><br>
+    Password: <input type="password" name="Password"><br><br><br>
     Today we are selling: <br><br>
     Ben and Jerry's Chubby Hubby Pint<br>
     <img src="http://www.benjerry.com/files/live/sites/systemsite/files/flavors/products/us/pint/chubby-hubby-detail.png"
@@ -21,10 +22,10 @@
     Too Faced Chocolate Bon Bons Eyeshadow Palette $50.00: <input type="number" name="makeup" value="0"><br>
     Compartes Spring Awakening Dark Chocolate / Mixed Berries Bar $10.00: <input type="number" name="DChocBar" value="0"><br><br>
     Shipping: <br>
-    <input type="radio" name="shipping" value="sevenDay"> Free 7 Day<br>
+    <input type="radio" name="shipping" value="sevenDay" checked> Free 7 Day<br>
     <input type="radio" name="shipping" value="threeDay"> $5.00 3 Day<br>
     <input type="radio" name="shipping" value="overnight"> $50.00 Over Night<br>
-    <input type="submit">
+    <input type="submit" onsubmit="run()">
   </form>
 </body>
 </html>
