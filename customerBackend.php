@@ -1,5 +1,5 @@
 <?php
-echo "<link rel='stylesheet' href='style.css'>";
+echo "<link rel='stylesheet' type='text.css' href='style.css'>";
 $userUserName = $_POST["userName"];
 $userPassword = $_POST["Password"];
 $userIceCream = $_POST["iceCream"];
@@ -19,6 +19,7 @@ elseif ($userShipping == "overnight") {
 else {
   $userShipTotal = 2000;
 }
+echo "<table border='1'>";
 echo "Thank you for buying something from us!<br>";
 echo "Username " . $userUserName . "<br>";
 echo "Password " . $userPassword . "<br><br>";
@@ -27,7 +28,7 @@ echo "<tr><th>Ben and Jerry's Chubby Hubby Pint</th><th>" . $userIceCream . "</t
 echo "<tr><th>Too Faced Chocolate Bon Bons Eyeshadow Palette</th><th>" . $userMakeup . "</th><th>$50.00</th><th>$" . 50*$userMakeup . "</th></tr>";
 echo "<tr><th>Compartes Spring Awakening Dark Chocolate / Mixed Berries Bar</th><th>" . $userDChocBar . "</th><th>$10.00</th><th>$" . 10*$userDChocBar . "</th></tr>";
 echo "<tr><th>Shipping</th><th colspan=2>" . $userShipping . "</th><th>" . $userShipTotal . "</th></tr>";
-echo "<tr><th colspan=3>Total Cost</th><th>$" . ((3*$userIceCream)+(50*$userMakeup)+(10*$userDChocBar)+$userShipTotal) . "</th></tr>"
-
+echo "<tr><th colspan=3>Total Cost</th><th>$" . ((3*$userIceCream)+(50*$userMakeup)+(10*$userDChocBar)+$userShipTotal) . "</th></tr>";
+echo "</table>";
 
 ?>
